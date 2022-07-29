@@ -9,7 +9,7 @@ const Movie = React.lazy(() => import('../../pages/Movie'));
 const Login = React.lazy(() => import('../../pages/Login'));
 const Three = React.lazy(() => import('../../pages/Three'));
 const Phone = React.lazy(() => import('../../pages/Phone'));
-const Form = React.lazy(() => import('../../pages/Form'));
+const Table = React.lazy(() => import('../../pages/Table'));
 
 function AppRouter() {
   return (
@@ -40,9 +40,9 @@ function AppRouter() {
             <React.Suspense fallback={<>...</>}>
               <Phone />
             </React.Suspense>} />
-          <Route path="/form" element={
+          <Route path="/table" element={
             <React.Suspense fallback={<>...</>}>
-              <Form />
+              <Table />
             </React.Suspense>} />
         </Routes>
       </BrowserRouter>

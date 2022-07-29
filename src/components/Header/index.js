@@ -174,10 +174,10 @@ const Header = () => {
                         <Link to="/three" onClick={() => setClickMobile(false)}>Three</Link>
                     </li> */}
                     <li>
-                        <Link to="/phone" onClick={() => setClickMobile(false)}>Phone</Link>
+                        <Link to="/table" onClick={() => setClickMobile(false)}>Table</Link>
                     </li>
                     <li>
-                        <Link to="/form" onClick={() => setClickMobile(false)}>Form</Link>
+                        <Link to="/phone" onClick={() => setClickMobile(false)}>Phone</Link>
                     </li>
                 </Menu>
                 <Mobilemenubar onClick={() => setClickMobile(!clickMobile)}>
@@ -202,10 +202,10 @@ const Header = () => {
                     <Link to="/three" onClick={() => setClickMobile(false)}>Three</Link>
                 </li> */}
                 <li>
-                    <Link to="/phone" onClick={() => setClickMobile(false)}>Phone</Link>
+                    <Link to="/table" onClick={() => setClickMobile(false)}>Table</Link>
                 </li>
                 <li>
-                    <Link to="/form" onClick={() => setClickMobile(false)}>Form</Link>
+                    <Link to="/phone" onClick={() => setClickMobile(false)}>Phone</Link>
                 </li>
             </Mobilemenu>
             {HeaderView() === '' ? '' : <Container>
