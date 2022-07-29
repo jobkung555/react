@@ -7,9 +7,9 @@ const Home = React.lazy(() => import('../../pages/Home'));
 const About = React.lazy(() => import('../../pages/About'));
 const Movie = React.lazy(() => import('../../pages/Movie'));
 const Login = React.lazy(() => import('../../pages/Login'));
-const Three = React.lazy(() => import('../../pages/Three'));
+// const Three = React.lazy(() => import('../../pages/Three'));
 const Phone = React.lazy(() => import('../../pages/Phone'));
-const Table = React.lazy(() => import('../../pages/Table'));
+// const Table = React.lazy(() => import('../../pages/Table'));
 
 function AppRouter() {
   return (
@@ -32,18 +32,18 @@ function AppRouter() {
             <React.Suspense fallback={<>...</>}>
               <Login />
             </React.Suspense>} />
-          <Route path="/three" element={
+          {/* <Route path="/three" element={
             <React.Suspense fallback={<>...</>}>
               <Three />
-            </React.Suspense>} />
+            </React.Suspense>} /> */}
           <Route path="/phone" element={
             <React.Suspense fallback={<>...</>}>
               <Phone />
             </React.Suspense>} />
-          <Route path="/table" element={
+          {/* <Route path="/table" element={
             <React.Suspense fallback={<>...</>}>
               <Table />
-            </React.Suspense>} />
+            </React.Suspense>} /> */}
         </Routes>
       </BrowserRouter>
     </>

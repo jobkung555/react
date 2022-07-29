@@ -173,9 +173,9 @@ const Header = () => {
                     {/* <li>
                         <Link to="/three" onClick={() => setClickMobile(false)}>Three</Link>
                     </li> */}
-                    <li>
+                    {/* <li>
                         <Link to="/table" onClick={() => setClickMobile(false)}>Table</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link to="/phone" onClick={() => setClickMobile(false)}>Phone</Link>
                     </li>
@@ -201,9 +201,9 @@ const Header = () => {
                 {/* <li>
                     <Link to="/three" onClick={() => setClickMobile(false)}>Three</Link>
                 </li> */}
-                <li>
+                {/* <li>
                     <Link to="/table" onClick={() => setClickMobile(false)}>Table</Link>
-                </li>
+                </li> */}
                 <li>
                     <Link to="/phone" onClick={() => setClickMobile(false)}>Phone</Link>
                 </li>
