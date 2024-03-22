@@ -11,6 +11,7 @@ import { ListComments } from './components/Listcomments'
 import { Listtravel } from './components/Listtravel'
 import { Boxwhat } from './components/Boxwhat'
 import { Profile } from './components/Profile'
+import { Bgblend } from './components/Bgblend'
 
 
 
@@ -19,6 +20,7 @@ export const MovieDataContext = createContext()
 const Home = () => {
 
   useEffect(() => {
+    document.title = 'Job Nep'
 
     const scrollside = () => {
       //Content
@@ -29,7 +31,7 @@ const Home = () => {
       })
 
       let anistart = document.querySelector('.anistart')
-      let aniarea = document.querySelector('.aniend').offsetTop - window.outerHeight + anistart.offsetHeight
+      let aniarea = document.querySelector('.aniend')?.offsetTop - window.outerHeight + anistart?.offsetHeight
       document.querySelectorAll(".anicontent").forEach(f => {
         f.classList.toggle("active", !!(scroll >= anistart.offsetTop && scroll <= aniarea))
       })
@@ -50,6 +52,7 @@ const Home = () => {
         <Listbox data={datamovie} />
         <Listbrand data={datamovie}/>
         <Profile />
+        <Bgblend />
         <ListComments />
         <Listtravel data={datamovie}/>
         <Boxwhat />

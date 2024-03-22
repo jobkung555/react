@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Publiclayout from '../../layout/Public'
 
 import myimage from '../../assets/images/10353375_10203925424720969_2981178867383107526_o.jpg'
+import imagestyle from '../../assets/images/2.jpg'
 
 const Mainbg = styled.div`
   background: #D0D7DF;
@@ -107,6 +108,11 @@ Blockimage.defaultProps = {
     margin: "-100px 0 0 300px"
   }
 }
+
+const Hiddenimage = styled.div`
+  background-image: ${imagestyle};
+`
+
 const sectionI2 = {
   width: "600px",
   height: "450px",
@@ -123,8 +129,9 @@ const BlockContent = styled.p`
 
 
 const About = (prop) => {
-
+  
   useEffect(() => {
+    document.title = 'About'
     function scrollside() {
       let scroll = window.scrollY
       let scrollarea = scroll + (window.outerHeight - 200)
@@ -157,6 +164,7 @@ const About = (prop) => {
             </Block>
           </MainBlock>
         </Mainbg>
+        <Hiddenimage/>
       </Publiclayout>
     </>
   )

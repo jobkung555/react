@@ -22,6 +22,7 @@ const Canvashidden = styled.div`
 const Three = () => {
 
   useEffect(() => {
+    document.title = 'Three'
     const gui = new dat.GUI()
 
     const scene = new THREE.Scene()

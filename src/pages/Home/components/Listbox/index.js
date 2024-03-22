@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { Container } from '../../../../components/Styles'
 
@@ -6,6 +6,7 @@ const Listboxul = styled.ul`
     display: grid;
     gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
     color: #fff;
     margin: 0 auto;
     padding: 0 20px;
@@ -101,9 +102,55 @@ const Contentarea = styled.p`
     padding: 0 20px;
 `
 
-export const Listbox = ({data}) => {
+const Boxstyle = styled.div`
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+`
+const Boxhover = styled.div`
+    position: relative;
+    width: 60%;
+    right: 0;
+    display: flex;
+    padding: 0 20px;
+    /* gap: 40px; */
+    margin-top: -150px;
 
+    &:hover div:nth-child(2) > div{
+        position: relative;
+        transform: rotate(0deg);
+        margin-left: 0;
+    }
 
+    @media screen and (max-width: 1024px){
+        position: relative;
+        margin-top: 20px;
+        /* gap: 20px; */
+        width: calc(100% - 40px);
+    }
+`
+const Boximage = styled.div`
+    background-image: url(${props => props.img});
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    aspect-ratio: 1;
+`
+
+const Boxchangeafter = styled.div`
+    position: relative;
+    width: 50%;
+    margin-left: 20px;
+`
+const Boximageafter = styled(Boximage)`
+    position: absolute;
+    transform: rotate(20deg);
+    width: 100%;
+    margin-left: -150px;
+    transition: 0.5s all ease-in-out;
+`
+
+export const Listbox = ({ data }) => {
     return (
         <Bg>
             <Container>
@@ -124,6 +171,13 @@ export const Listbox = ({data}) => {
                         </Listboxli>
                     ) : ``}
                 </Listboxul>
+                <Boxstyle>
+                    <Boxhover>
+                        {data ? data.map((m, k) =>
+                            k < 2 && (k==0?<Boximage key={k} img={m.img} />:<Boxchangeafter key={k}><Boximageafter  img={m.img}/></Boxchangeafter>)
+                        ) : ``}
+                    </Boxhover>
+                </Boxstyle>
             </Container>
         </Bg>
     )

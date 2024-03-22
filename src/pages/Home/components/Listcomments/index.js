@@ -65,7 +65,7 @@ const Boxarea = styled.div`
     display: flex;
     flex-direction: row;
     gap: 30px;
-    margin: -100px -300px -100px 0;
+    margin: -100px -300px -100px 30px;
     @media screen and (max-width: 1024px){
         flex-direction: column;
         margin: 0;
@@ -166,7 +166,7 @@ export const ListComments = () => {
                         <Boxsplit>
                             <Boxfake />
                             {[...Array(3)].map((m, k) =>
-                                <Box key={k} className={(k == 1 ? `active` : ``)}>
+                                <Box key={k} className={(k === 1 ? `active` : ``)}>
                                     <Boxcontent>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Boxcontent>
                                     <Boxprofile>
                                         <Boximgarea>
