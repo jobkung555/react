@@ -1,8 +1,10 @@
 firebase logout
 firebase login
 
+yarn build
+
 firebase init - hosting and deploy
-public
-single app - no
+build
+no all
 
 firebase deploy
